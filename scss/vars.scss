@@ -1,0 +1,45 @@
+$color-black: #000;
+$color-white: #FFFFFF;
+$color-orange: #FDB913;
+$color-grey: #F8F8F8;
+$color-dark: #2D2D2D;
+$color-turquoise: #446A82;
+@mixin container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+@mixin small-container {
+    max-width: 540px;
+}
+
+@mixin display-btw {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin button {
+    background: $color-orange;
+    border-radius: 50px;
+    font-family: OpenSans-Bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-white;
+    padding: 15px 30px;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(111, 78, 0, 0.36);
+    -moz-box-shadow: 0px 0px 15px 3px rgba(111, 78, 0, 0.36);
+    box-shadow: 0px 0px 15px 3px rgba(111, 78, 0, 0.36);
+    transition: 1s;
+}
+
+@mixin title {
+    font-size: 35px;
+    line-height: 45px;
+}
+
+@mixin text {
+    font-size: 16px;
+    line-height: 25px;
+}

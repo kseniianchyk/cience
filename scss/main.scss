@@ -1,0 +1,401 @@
+@import 'fonts.scss';
+@import 'reset-styles.scss';
+@import 'vars.scss';
+// main
+.main {
+    background: url('../images/intro-bg.jpg') center no-repeat;
+    background-size: cover;
+    height: 800px;
+    background-attachment: fixed;
+    &__container {
+        padding-top: 117px;
+        @include container;
+        @include display-btw;
+        align-items: end;
+    }
+    &__content {
+        padding-top: 13px;
+        @include small-container;
+        color: $color-white
+    }
+    &__title {
+        font-size: 45px;
+        line-height: 55px;
+        margin: 42px 0 20px 0;
+    }
+    &__text {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    &__btn {
+        margin-top: 48px;
+        @include button;
+        &:hover {
+            background: transparent;
+            border: 1px solid $color-orange;
+            color: $color-orange;
+        }
+    }
+    &__image {
+        --animate-duration: 4s;
+    }
+}
+
+// /main
+// wrapper
+.wrapper {
+    background: $color-grey;
+    padding: 66px 0 65px 0;
+    &__container {
+        @include container;
+        @include display-btw;
+    }
+    &__content {
+        @include small-container;
+        color: $color-dark;
+    }
+    &__title {
+        @include title;
+        margin-bottom: 30px;
+    }
+    &__text {
+        animation-delay: 1s;
+        @include text;
+        >span {
+            display: block;
+            margin-top: 25px;
+        }
+    }
+    &__image {
+        filter: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.15));
+        >img {
+            border-radius: 5px;
+        }
+    }
+}
+
+// /wrapper
+// video block
+.video {
+    text-align: center;
+    padding: 65px 0;
+    &__title {
+        font-size: 35px;
+        line-height: 35px;
+        color: $color-dark;
+        margin-bottom: 45px;
+    }
+    &__content {
+        width: 920px;
+        height: 517px;
+        margin: 0 auto;
+        >iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+// /video block
+// service
+.service {
+    &__container {
+        padding-bottom: 65px;
+        @include container;
+        @include display-btw;
+    }
+    &__item {
+        max-width: 350px;
+    }
+    &__item-img {
+        &.item-img--2 {
+            animation-delay: 1s;
+        }
+        &.item-img--3 {
+            animation-delay: 2s;
+        }
+    }
+    &__item-title {
+        font-size: 30px;
+        line-height: 30px;
+        margin: 20px 0;
+    }
+    &__item-text {
+        @include text;
+    }
+}
+
+// /service
+// advantage
+.advantage {
+    background: $color-orange;
+    &__container {
+        display: flex;
+    }
+    &__image {
+        width: 960px;
+        height: 512px;
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        max-width: 445px;
+        margin: 51px 0 0 110px;
+        color: $color-white;
+    }
+    &__title {
+        @include title;
+        margin-bottom: 25px;
+    }
+    &__text {
+        @include text;
+        animation-delay: 1s;
+        >span {
+            display: block;
+            margin-top: 25px;
+        }
+    }
+}
+
+// /advantage
+// reviews
+.reviews {
+    padding: 65px 0;
+    &__container {
+        @include container;
+        color: $color-dark;
+    }
+    &__title {
+        font-size: 35px;
+        line-height: 35px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    &__slider {
+        animation-delay: 1s;
+        .slick-next {
+            right: -5px;
+            &:before {
+                opacity: 1;
+                content: "";
+                background: url('../images/slider-arrow.svg') no-repeat center;
+                background-size: contain;
+                width: 21px;
+                height: 50px;
+                display: block;
+            }
+        }
+        .slick-prev {
+            left: -65px;
+            transform: rotate( 180deg);
+            &:before {
+                opacity: 1;
+                content: "";
+                background: url('../images/slider-arrow.svg') no-repeat center;
+                background-size: contain;
+                width: 21px;
+                height: 50px;
+                display: block;
+            }
+        }
+    }
+    &__item {
+        width: 300px;
+        padding-right: 60px;
+    }
+    &__item-text {
+        font-size: 18px;
+        line-height: 30px;
+        font-family: OpenSans-LightItalic;
+    }
+    &__item-title {
+        margin-top: 25px;
+        font-size: 20px;
+        line-height: 25px;
+        font-family: OpenSans-Bold;
+    }
+    &__item-subtitle {
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+// /reviews
+// partnership
+.partnership {
+    padding-bottom: 65px;
+    &__container {
+        @include container;
+        @include display-btw;
+        flex-wrap: wrap;
+    }
+    &__item {
+        &.item--1 {
+            animation-delay: 1s;
+        }
+        &.item--2 {
+            animation-delay: 2s;
+        }
+        &.item--3 {
+            animation-delay: 3s;
+        }
+        &.item--4 {
+            animation-delay: 4s;
+        }
+        &.item--5 {
+            animation-delay: 5s;
+        }
+        &.item--6 {
+            animation-delay: 6s;
+        }
+    }
+}
+
+// /partnership
+// connect
+.connect {
+    background: $color-turquoise;
+    padding: 60px 0 86px 0;
+    color: $color-white;
+    &__title {
+        max-width: 710px;
+        margin: 0 auto;
+        @include title;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    &__form {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+    &__form-item {
+        margin-bottom: 40px;
+        >textarea {
+            margin-top: 20px;
+            width: 100%;
+            border: 0;
+            outline: none;
+            border-radius: 5px;
+            font-size: 20px;
+            line-height: 25px;
+            color: $color-turquoise;
+            font-family: OpenSans-Light;
+            padding: 21px 19px 18px 17px;
+        }
+        &.item--textarea {
+            margin-bottom: 28px;
+        }
+        &.item--1 {
+            animation-delay: 1s;
+        }
+        &.item--2 {
+            animation-delay: 2s;
+        }
+        &.item--3 {
+            animation-delay: 3s;
+        }
+    }
+    &__form-title {
+        display: block;
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
+        padding-left: 5px;
+    }
+    &__form-input {
+        margin-top: 20px;
+        width: 100%;
+        background: $color-white;
+        border-radius: 5px;
+        font-size: 20px;
+        line-height: 25px;
+        color: $color-turquoise;
+        padding: 16px 17px;
+        font-family: OpenSans-Light;
+        &::placeholder {
+            color: $color-turquoise;
+        }
+    }
+    &__form-action {
+        @include display-btw;
+        &.item--4 {
+            animation-delay: 4s;
+        }
+    }
+    &__form-input-check {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        +label {
+            position: relative;
+            padding: 0 0 0 52px;
+            cursor: pointer;
+            font-size: 20px;
+            line-height: 20px;
+            font-family: OpenSans-Light;
+        }
+        +label:before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: $color-white;
+            transition: .2s;
+        }
+        +label:after {
+            content: url('../images/check.svg');
+            position: absolute;
+            top: 5px;
+            left: 7px;
+            transition: .2s;
+            opacity: 0;
+        }
+        &:checked+label:after {
+            opacity: 1;
+        }
+    }
+    &__form-btn {
+        @include button;
+        padding: 16px 45px;
+        &:hover {
+            background: transparent;
+            border: 1px solid $color-orange;
+            color: $color-orange;
+        }
+    }
+}
+
+// /connect
+// footer 
+.footer {
+    @include display-btw;
+    justify-content: center;
+    background: $color-turquoise;
+    padding: 0 0 50px 0;
+    color: $color-white;
+    .logo {
+        width: 56px;
+        height: 72px;
+        margin-right: 35px;
+        &__link {
+            >img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__text {
+        @include text;
+        margin: 0;
+    }
+}
+
+// /footer
+@import 'adaptive.scss'
